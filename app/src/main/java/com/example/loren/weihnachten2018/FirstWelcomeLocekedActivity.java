@@ -19,8 +19,6 @@ public class FirstWelcomeLocekedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_welcome_loceked);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Frohe Weihnachten!");
 
         Code = (EditText)findViewById(R.id.code);
         EntsperrenBtn = (Button)findViewById(R.id.entsperren);
