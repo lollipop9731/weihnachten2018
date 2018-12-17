@@ -1,4 +1,36 @@
 <resources>
     <string name="app_name">Weihnachten2018</string>
     <string name="welcome_text">Einen wunderschönen guten Abend Luisa! Und natürlich der gesamten restlichen Familie auch. Da ich dir eigentlich immer gerne was selbstgemachtes schenken will, aber mir nicht so richtig was eingefallen ist, gibts jetzt deine persönliche Weihnachtsapp! Aber erst müssen ein paar Rätsel gelöst werden, wäre ja sonst zu langweilig. Also viel Spaß und einen schönen Abend noch :)</string>
+    <string name="einfuehrung_text">Frohe Weihnachten an alle Wurls! Ich dachte mir, selbstgemachte Geschenke sind doch immer was feines und eine App hast du bestimmt noch nie bekommen Luisa. Am Ende wartet noch eine Überraschung, aber die muss erarbeitet werden. 5 Rätsel müssen vorher noch gelöst werden. Damit das Gehirn auch an Heiligabend in Schwung bleibt. Müssen natürlich nicht alle heute gelöst werden.
+Natürlich sind die Rätsel nicht nur für Luisa, alle dürfen sehr gerne mithelfen.
+
+Die Rätsel können in beliebiger Reihenfolge gelöst werden
+, für die Antworteingabe auf den Haken unten rechts drücken.
+
+Viel Spaß !  </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Einstein_intro">Eine harte Nuss zum Beginn. Das vielleicht
+berühmtesteste Logikrätsel überhaupt.
+Viel Spaß:) Tipp: Tabelle aufstellen hilft</string>
+    <string name="Einstein_First">Fünf Häuser stehen nebeneinander. In ihnen wohnen Menschen von fünf unterschiedlichen Nationalitäten, die fünf unterschiedliche Getränke trinken, fünf unterschiedliche Zigarettenmarken rauchen und fünf unterschiedliche Haustiere haben.</string>
+    <string name="Einstein_Second">
+1. Der Engländer lebt im roten Haus.
+2. Der Spanier hat einen Hund.
+3. Der Ukrainer trinkt gern Tee.
+4. Das grüne Haus ist (direkt) links vom weißen Haus.
+6. Im grünen Haus wird Kaffee getrunken.
+7. Die Person, die Old-Gold raucht, hat eine Schnecke.
+9. Der Bewohner des mittleren Hauses trinkt Milch.
+10. Der Bewohner des gelben Hauses raucht Kools.
+11. Der Norweger wohnt im ersten Haus.
+12. Der Chesterfields-Raucher wohnt neben der Person mit der Fuchs.
+14. Der Mann mit dem Pferd lebt neben der Person,
+    Die Kools raucht.
+15. Der Lucky-Strike-Raucher trinkt Orangensaft.
+16. Der Norweger wohnt neben dem blauen Haus.
+17. Der Japaner raucht Parliaments.
+18. Der Chesterfields-Raucher hat einen Nachbarn,
+der Wasser trinkt.</string>
 </resources>

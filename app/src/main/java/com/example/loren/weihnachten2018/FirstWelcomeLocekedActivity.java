@@ -29,7 +29,7 @@ public class FirstWelcomeLocekedActivity extends AppCompatActivity {
                 if(!Code.getText().toString().equals("")){
                     if(Code.getText().toString().equals("1369")){
                         //code richtig
-                        Intent intent = new Intent(FirstWelcomeLocekedActivity.this,WelcomeTextActivity.class);
+                        Intent intent = new Intent(FirstWelcomeLocekedActivity.this,EinfuehrungActivity.class);
                         startActivity(intent);
                     }else{
                         Code.setError("Falscher Code!");

@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorBackgroundLockscreen">#AB3F15</color>
+    <color name="Einfuehrung">#4a7c4c</color>
+    <color name="Raetsel_1">#4caf50</color>
 </resources>
