@@ -5,32 +5,84 @@
 Natürlich sind die Rätsel nicht nur für Luisa, alle dürfen sehr gerne mithelfen.
 
 Die Rätsel können in beliebiger Reihenfolge gelöst werden
-, für die Antworteingabe auf den Haken unten rechts drücken.
+, für die Antworteingabe auf den Haken unten links drücken.
+        Für jedes Rätsel gibt es zwei Versuche! (Falls ihr es mit denen nicht schafft, soll Luisa mir schreiben, eventuell kann ich noch helfen:)
 
 Viel Spaß !  </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Rätsel Einstein -->
     <string name="Einstein_intro">Eine harte Nuss zum Beginn. Das vielleicht
 berühmtesteste Logikrätsel überhaupt.
-Viel Spaß:) Tipp: Tabelle aufstellen hilft</string>
-    <string name="Einstein_First">Fünf Häuser stehen nebeneinander. In ihnen wohnen Menschen von fünf unterschiedlichen Nationalitäten, die fünf unterschiedliche Getränke trinken, fünf unterschiedliche Zigarettenmarken rauchen und fünf unterschiedliche Haustiere haben.</string>
+Viel Spaß:) Tipp: Tabelle aufstellen hilft
+   </string>
+
+    <string name="Einstein_title">Einstein Rätsel</string>
     <string name="Einstein_Main">
-1. Der Engländer lebt im roten Haus.
-2. Der Spanier hat einen Hund.
-3. Der Ukrainer trinkt gern Tee.
-4. Das grüne Haus ist (direkt) links vom weißen Haus.
-6. Im grünen Haus wird Kaffee getrunken.
-7. Die Person, die Old-Gold raucht, hat eine Schnecke.
-9. Der Bewohner des mittleren Hauses trinkt Milch.
-10. Der Bewohner des gelben Hauses raucht Kools.
-11. Der Norweger wohnt im ersten Haus.
-12. Der Chesterfields-Raucher wohnt neben der Person mit der Fuchs.
-14. Der Mann mit dem Pferd lebt neben der Person,
-    Die Kools raucht.
-15. Der Lucky-Strike-Raucher trinkt Orangensaft.
-16. Der Norweger wohnt neben dem blauen Haus.
-17. Der Japaner raucht Parliaments.
-18. Der Chesterfields-Raucher hat einen Nachbarn,
-der Wasser trinkt.</string>
+         Fünf Häuser stehen nebeneinander. In ihnen wohnen Menschen von fünf unterschiedlichen Nationalitäten,
+        die fünf unterschiedliche Getränke trinken, fünf unterschiedliche Zigarettenmarken rauchen und fünf unterschiedliche Haustiere haben. 15 Sätze sind gegeben.
+        Wem gehört das Zebra? \n \n
+1. Der Engländer lebt im roten Haus.\n
+2. Der Spanier hat einen Hund.\n
+3. Der Ukrainer trinkt gern Tee.\n
+4. Das grüne Haus ist (direkt) links vom weißen Haus. \n
+5. Im grünen Haus wird Kaffee getrunken.\n
+6. Die Person, die Old-Gold raucht, hat eine Schnecke.\n
+7. Der Bewohner des mittleren Hauses trinkt Milch.\n
+8. Der Bewohner des gelben Hauses raucht Kools.\n
+9. Der Norweger wohnt im ersten Haus.\n
+10. Der Chesterfields-Raucher wohnt neben der Person mit der Fuchs.\n
+11. Der Mann mit dem Pferd lebt neben der Person,
+    die Kools raucht.\n
+12. Der Lucky-Strike-Raucher trinkt Orangensaft.\n
+13. Der Norweger wohnt neben dem blauen Haus.\n
+14. Der Japaner raucht Parliaments.\n
+15. Der Chesterfields-Raucher hat einen Nachbarn,
+der Wasser trinkt.\n
+       </string>
+
+
+
+    <!-- Kryptischer Geldgewinn-->
+
+    <string name="Geldwunsch_titel">Kryptischer Geldwunsch</string>
+    <string name="Geldwunsch_intro">
+Ich weiß, Mathe ist jetzt nicht unbedingt deine Lieblingswissenschaft, dafür gibt es jetzt hier auch extra Buchstaben!</string>
+    <string name="Geldwunsch_main">
+Ein mal wieder vollkommen blanker Student, schickt seinem Vater eine verzweifelte Postkarte, mit der Bitte um Geld. Jeder Buchstabe steht hierbei für eine Ziffer von 0 - 9. Unterschiedliche Buchstaben bedeuten unterschiedliche Ziffern.
+Wie viel Geld muss der Vater seinem Sohn schicken?</string>
+
+
+    <!--Die findigen Gangster -->
+    <string name="Gangster_title">Die findigen Gangster</string>
+    <string name="Gangster_intro">Immer wieder werden Gäste einer Eckkneipe beklaut - und die Polizei hat schon lange einen Verdacht. Doch die Diebe agieren äußerst vorsichtig. Können die Beamten sie trotzdem fassen?</string>
+    <string name="Gangster_main">Die beiden Kriminellen sind längst stadtbekannt, bestehlen sie doch immer wieder Gäste einer Kneipe in der Nähe ihres Wohnhauses. Da sie bisher noch nicht gefasst worden sind, will die Polizei sie möglichst auf frischer Tat ertappen. Die beiden sind aber sehr vorsichtig und verlassen die Kneipe (A) auf dem Weg zu ihrem Haus (B) nur wenn die Luft rein ist. Die Polizei legen sich an Punkt X auf die Lauer. Die beiden Gangster laufen an jeder Kreuzung entweder nach rechts oder unten, niemals nach oben oder links. Falls zwei Wege möglich sind, werfen sie eine Münze. Ist nur eine Richtung möglich nehmen sie diese. Wie groß ist dann die Wahrscheinlichkeit, dass die Diebe an dieser Ecke vorbeilaufen, wenn sie von der Kneipe nach Hause gehen? </string>
+
+
+<!-- Ziegenproblem -->
+    <string name="Ziegen_title">Das Ziegenproblem</string>
+    <string name="Ziegen_intro">Ich glaube das habe ich dir schonmal erzählt, bin mir aber nicht mehr sicher. Falls es jemand noch nicht kennt, optimale Grundlage für ausschweifende Diskussionen!</string>
+    <string name="Ziegen_main">Ein Kandidat wird vor drei verschlossene Türen gestellt. Hinter einer Tür ist ein Auto, hinter den beiden anderen steht je eine Ziege.
+Zuerst muss sich der Kandidat für eine Tür entscheiden indem er sich davor stellt. Nun öffnet der Moderator eine der beiden anderen Türen, von der er weiß, dass sich eine Ziege dahinter befindet. Dann bietet der Moderator dem Kandidaten an, zur anderen Tür zu wechseln.
+\n
+ Würde der Wechsel seine Gewinnchancen erhöhen, erniedrigen oder würde der Wechsel nichts an den Gewinnchancen ändern?</string>
+
+
+    <!-- Golderbe -->
+    <string name="Golderbe_title">Das Golderbe</string>
+    <string name="Golderbe_Intro">Ein alter Mann verteilt sein Erbe an die Söhne nach einem seltsamen Schlüssel. Trotzdem bekommt jeder Sohn gleich viele Münzen. Wie viele Söhne hat der Mann?</string>
+    <string name="Golderbe_Main">Ein kranker, alter Mann spürt, dass ihm nur noch wenige Stunden bleiben. Er möchte auf jeden Fall noch sein Erbe regeln, bevor er stirbt. Deshalb ruft er seine Söhne zusammen und sagt: "Ich verteile jetzt mein Geld. Jeder von euch soll gleich viel bekommen."
+
+Dann gibt er dem ältesten Sohn eine der Goldmünzen und genau ein Siebentel der verbleibenden Münzen. Der zweitälteste Sohn bekommt zwei Münzen und exakt ein siebentel des Restes. Der drittälteste Sohn bekommt drei Münzen und genau ein Siebentel des Restes.
+
+Der Mann hat die Goldstücke für den drittältesten Sohn gerade abgezählt, als er plötzlich stirbt. Bis dahin hatte er weder alle Goldstücke verteilt noch alle Söhne mit ihrem Erbe bedacht.
+
+Wie viele Söhne hatte der Mann? \n
+
+Hinweis: Eine Münze darf nicht geteilt werden</string>
+
+    <string name="versuche">%1$d / 2</string>
 </resources>

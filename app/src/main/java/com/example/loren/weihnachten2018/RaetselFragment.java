@@ -7,7 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -26,6 +28,7 @@ public class RaetselFragment extends Fragment {
     private static final String ARG_Introtext = "param2";
     private static final String ARG_Maintext="param3";
     private static final String ARG_Background_color="param4";
+    private static final String ARG_Image="param5";
 
     // TODO: Rename and change types of parameters
     
@@ -33,12 +36,15 @@ public class RaetselFragment extends Fragment {
     private String Introtext;
     private String Maintext;
     private int backgroundcolor;
+    private int image;
 
     //Views from Layout
     private TextView TextÜberschrift;
     private TextView TextIntro;
     private TextView TextMain;
     private FrameLayout frameLayout;
+    private ImageView image_view;
+    private Button RedeemButton;
 
     private OnFragmentInteractionListener mListener;
 
@@ -54,13 +60,15 @@ public class RaetselFragment extends Fragment {
      * @param backgroundcolor
      * @return
      */
-    public static RaetselFragment newInstance(String Überschrift, String Introtext, String Maintext, int backgroundcolor) {
+    public static RaetselFragment newInstance(String Überschrift, String Introtext, String Maintext, int backgroundcolor,int image) {
         RaetselFragment fragment = new RaetselFragment();
         Bundle args = new Bundle();
         args.putString(ARG_Überschrift, Überschrift);
         args.putString(ARG_Introtext, Introtext);
         args.putString(ARG_Maintext, Maintext);
         args.putInt(ARG_Background_color, backgroundcolor);
+        args.putInt(ARG_Image, image);
+
 
         fragment.setArguments(args);
         return fragment;
@@ -74,6 +82,8 @@ public class RaetselFragment extends Fragment {
             Introtext = getArguments().getString(ARG_Introtext);
             Maintext = getArguments().getString(ARG_Maintext);
             backgroundcolor = getArguments().getInt(ARG_Background_color);
+            image = getArguments().getInt(ARG_Image);
+
 
         }
     }
@@ -87,25 +97,40 @@ public class RaetselFragment extends Fragment {
         TextIntro = (TextView)view.findViewById(R.id.text_intro);
         TextMain = (TextView)view.findViewById(R.id.text_main);
         frameLayout = (FrameLayout)view.findViewById(R.id.background_layout);
+        image_view = (ImageView) view.findViewById(R.id.image_middle);
+        RedeemButton = (Button)view.findViewById(R.id.redeem);
+        RedeemButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onButtonPressed(Überschrift);
+
+            }
+        });
+
 
         TextÜberschrift.setText(Überschrift);
         TextIntro.setText(Introtext);
         TextMain.setText(Maintext);
         frameLayout.setBackgroundColor(backgroundcolor);
+        image_view.setImageResource(image);
         return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed(String title) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onFragmentInteraction(title);
         }
+    }
+
+    public void setOnListener(OnFragmentInteractionListener mListener){
+        this.mListener = mListener;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
+       if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
@@ -131,6 +156,9 @@ public class RaetselFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onFragmentInteraction(String title);
     }
+
+
+
 }
