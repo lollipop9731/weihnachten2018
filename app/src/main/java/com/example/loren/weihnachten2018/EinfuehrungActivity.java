@@ -1,7 +1,9 @@
 package com.example.loren.weihnachten2018;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class EinfuehrungActivity extends AppCompatActivity {
 
@@ -9,5 +11,12 @@ public class EinfuehrungActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_einfuehrung);
+
+
+    }
+
+    public void onClick(View view){
+        Intent intent = new Intent(EinfuehrungActivity.this,RaetselActivity.class);
+        startActivity(intent);
     }
 }

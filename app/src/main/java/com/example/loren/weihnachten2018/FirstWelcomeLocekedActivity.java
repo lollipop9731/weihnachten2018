@@ -19,6 +19,11 @@ public class FirstWelcomeLocekedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_welcome_loceked);
 
+        //todo unccomment only for development
+
+        Intent intent = new Intent(FirstWelcomeLocekedActivity.this,EinfuehrungActivity.class);
+        startActivity(intent);
+
 
         Code = (EditText)findViewById(R.id.code);
         EntsperrenBtn = (Button)findViewById(R.id.entsperren);

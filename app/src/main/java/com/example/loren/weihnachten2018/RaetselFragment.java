@@ -7,46 +7,61 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Raetsel_1_Einstein.OnFragmentInteractionListener} interface
+ * {@link RaetselFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Raetsel_1_Einstein#newInstance} factory method to
+ * Use the {@link RaetselFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Raetsel_1_Einstein extends Fragment {
+public class RaetselFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_Überschrift = "param1";
+    private static final String ARG_Introtext = "param2";
+    private static final String ARG_Maintext="param3";
+    private static final String ARG_Background_color="param4";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    
+    private String Überschrift;
+    private String Introtext;
+    private String Maintext;
+    private int backgroundcolor;
+
+    //Views from Layout
+    private TextView TextÜberschrift;
+    private TextView TextIntro;
+    private TextView TextMain;
+    private FrameLayout frameLayout;
 
     private OnFragmentInteractionListener mListener;
 
-    public Raetsel_1_Einstein() {
+    public RaetselFragment() {
         // Required empty public constructor
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Raetsel_1_Einstein.
+     * @param Überschrift Thin and Light
+     * @param Introtext introText
+     * @param Maintext
+     * @param backgroundcolor
+     * @return
      */
-    // TODO: Rename and change types and number of parameters
-    public static Raetsel_1_Einstein newInstance(String param1, String param2) {
-        Raetsel_1_Einstein fragment = new Raetsel_1_Einstein();
+    public static RaetselFragment newInstance(String Überschrift, String Introtext, String Maintext, int backgroundcolor) {
+        RaetselFragment fragment = new RaetselFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_Überschrift, Überschrift);
+        args.putString(ARG_Introtext, Introtext);
+        args.putString(ARG_Maintext, Maintext);
+        args.putInt(ARG_Background_color, backgroundcolor);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -55,8 +70,11 @@ public class Raetsel_1_Einstein extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            Überschrift = getArguments().getString(ARG_Überschrift);
+            Introtext = getArguments().getString(ARG_Introtext);
+            Maintext = getArguments().getString(ARG_Maintext);
+            backgroundcolor = getArguments().getInt(ARG_Background_color);
+
         }
     }
 
@@ -64,7 +82,17 @@ public class Raetsel_1_Einstein extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_raetsel_1__einstein, container, false);
+        View view = inflater.inflate(R.layout.fragment_raetsel, container, false);
+        TextÜberschrift = (TextView)view.findViewById(R.id.text_title);
+        TextIntro = (TextView)view.findViewById(R.id.text_intro);
+        TextMain = (TextView)view.findViewById(R.id.text_main);
+        frameLayout = (FrameLayout)view.findViewById(R.id.background_layout);
+
+        TextÜberschrift.setText(Überschrift);
+        TextIntro.setText(Introtext);
+        TextMain.setText(Maintext);
+        frameLayout.setBackgroundColor(backgroundcolor);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

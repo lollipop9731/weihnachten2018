@@ -26,7 +26,8 @@
 
 
         </activity>
-        <activity android:name="com.example.example.intro"
+        <activity android:name=".RaetselActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:label="appintro" />
     </application>
 
