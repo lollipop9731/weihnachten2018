@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class DialogFragment extends android.support.v4.app.DialogFragment {
 
-    public static final String VERSUCHEKEY ="versuche" ;
+    public static final String VERSUCHEKEY ="versuche";
     int numberofcheckboxes;
     String correctcheckbox;
     String[] checkboxestitles;
@@ -28,7 +28,21 @@ public class DialogFragment extends android.support.v4.app.DialogFragment {
     private String solution;
     private int i ;
     private TextView versuche;
+    //interface for communication if rätsel solved clicked
+    RaetselSolved mSolved;
 
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        //make sure interface is implemented
+        if (context instanceof RaetselSolved) {
+            mSolved = (RaetselSolved) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement RaetselSolved");
+        }
+    }
 
     /**
      * Create a new instance of MyDialogFragment, providing "num"
@@ -96,7 +110,7 @@ public class DialogFragment extends android.support.v4.app.DialogFragment {
 
         }
 
-        Button redeem = (Button)v.findViewById(R.id.checksolution);
+        final Button redeem = (Button)v.findViewById(R.id.checksolution);
         redeem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,6 +120,9 @@ public class DialogFragment extends android.support.v4.app.DialogFragment {
                     if(solution.equals(correctcheckbox)){
                         //richtige Lösung
                         Toast.makeText(getContext(),"Richtig",Toast.LENGTH_LONG).show();
+                        setVersuche(-1,title);
+
+                        mSolved.SolvedClicked(title);
                         dismiss();
                     }else{
                         //Falsche Lösung, Versuche erhöhen
@@ -123,6 +140,11 @@ public class DialogFragment extends android.support.v4.app.DialogFragment {
         return v;
     }
 
+    /**
+     *
+     * @param versuch -1 für succesful
+     * @param titleofrätsel
+     */
     public void setVersuche(int versuch,String titleofrätsel){
         SharedPreferences sharedPreferences = getContext().getSharedPreferences(VERSUCHEKEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -144,5 +166,15 @@ public class DialogFragment extends android.support.v4.app.DialogFragment {
                 editor.commit();
             }
         }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mSolved = null;
+    }
+
+    public interface RaetselSolved{
+        void SolvedClicked(String title);
     }
 }

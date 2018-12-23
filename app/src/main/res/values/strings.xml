@@ -45,7 +45,6 @@ der Wasser trinkt.\n
        </string>
 
 
-
     <!-- Kryptischer Geldgewinn-->
 
     <string name="Geldwunsch_titel">Kryptischer Geldwunsch</string>
@@ -62,7 +61,7 @@ Wie viel Geld muss der Vater seinem Sohn schicken?</string>
     <string name="Gangster_main">Die beiden Kriminellen sind längst stadtbekannt, bestehlen sie doch immer wieder Gäste einer Kneipe in der Nähe ihres Wohnhauses. Da sie bisher noch nicht gefasst worden sind, will die Polizei sie möglichst auf frischer Tat ertappen. Die beiden sind aber sehr vorsichtig und verlassen die Kneipe (A) auf dem Weg zu ihrem Haus (B) nur wenn die Luft rein ist. Die Polizei legen sich an Punkt X auf die Lauer. Die beiden Gangster laufen an jeder Kreuzung entweder nach rechts oder unten, niemals nach oben oder links. Falls zwei Wege möglich sind, werfen sie eine Münze. Ist nur eine Richtung möglich nehmen sie diese. Wie groß ist dann die Wahrscheinlichkeit, dass die Diebe an dieser Ecke vorbeilaufen, wenn sie von der Kneipe nach Hause gehen? </string>
 
 
-<!-- Ziegenproblem -->
+    <!-- Ziegenproblem -->
     <string name="Ziegen_title">Das Ziegenproblem</string>
     <string name="Ziegen_intro">Ich glaube das habe ich dir schonmal erzählt, bin mir aber nicht mehr sicher. Falls es jemand noch nicht kennt, optimale Grundlage für ausschweifende Diskussionen!</string>
     <string name="Ziegen_main">Ein Kandidat wird vor drei verschlossene Türen gestellt. Hinter einer Tür ist ein Auto, hinter den beiden anderen steht je eine Ziege.

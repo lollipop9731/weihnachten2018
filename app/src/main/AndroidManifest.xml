@@ -21,14 +21,14 @@
         <activity
             android:name=".WelcomeTextActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".EinfuehrungActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-
-
-        </activity>
-        <activity android:name=".RaetselActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:label="appintro" />
+        <activity
+            android:name=".EinfuehrungActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".RaetselActivity"
+            android:label="appintro"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

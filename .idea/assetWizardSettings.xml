@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_sherlock" />
-                            <entry key="sourceFile" value="C:\Users\loren\OneDrive\Sonstiges\Luisa App\Ressourcen\sherlock.svg" />
+                            <entry key="outputName" value="ic_correct" />
+                            <entry key="sourceFile" value="C:\Users\l\OneDrive\Sonstiges\Luisa App\Ressourcen\correct.svg" />
                           </map>
                         </option>
                       </PersistentState>

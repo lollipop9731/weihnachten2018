@@ -1,7 +1,7 @@
 package com.example.loren.weihnachten2018;
 
 import android.content.Context;
-import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import static com.example.loren.weihnachten2018.DialogFragment.VERSUCHEKEY;
 
 
 /**
@@ -26,13 +28,13 @@ public class RaetselFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_Überschrift = "param1";
     private static final String ARG_Introtext = "param2";
-    private static final String ARG_Maintext="param3";
-    private static final String ARG_Background_color="param4";
-    private static final String ARG_Image="param5";
+    private static final String ARG_Maintext = "param3";
+    private static final String ARG_Background_color = "param4";
+    private static final String ARG_Image = "param5";
 
     // TODO: Rename and change types of parameters
-    
-    private String Überschrift;
+
+    public String Überschrift;
     private String Introtext;
     private String Maintext;
     private int backgroundcolor;
@@ -52,15 +54,18 @@ public class RaetselFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public String getÜberschrift() {
+        return Überschrift;
+    }
+
     /**
-     *
-     * @param Überschrift Thin and Light
-     * @param Introtext introText
+     * @param Überschrift     Thin and Light
+     * @param Introtext       introText
      * @param Maintext
      * @param backgroundcolor
      * @return
      */
-    public static RaetselFragment newInstance(String Überschrift, String Introtext, String Maintext, int backgroundcolor,int image) {
+    public static RaetselFragment newInstance(String Überschrift, String Introtext, String Maintext, int backgroundcolor, int image) {
         RaetselFragment fragment = new RaetselFragment();
         Bundle args = new Bundle();
         args.putString(ARG_Überschrift, Überschrift);
@@ -93,12 +98,16 @@ public class RaetselFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_raetsel, container, false);
-        TextÜberschrift = (TextView)view.findViewById(R.id.text_title);
-        TextIntro = (TextView)view.findViewById(R.id.text_intro);
-        TextMain = (TextView)view.findViewById(R.id.text_main);
-        frameLayout = (FrameLayout)view.findViewById(R.id.background_layout);
+        TextÜberschrift = (TextView) view.findViewById(R.id.text_title);
+        TextIntro = (TextView) view.findViewById(R.id.text_intro);
+        TextMain = (TextView) view.findViewById(R.id.text_main);
+        frameLayout = (FrameLayout) view.findViewById(R.id.background_layout);
         image_view = (ImageView) view.findViewById(R.id.image_middle);
-        RedeemButton = (Button)view.findViewById(R.id.redeem);
+        RedeemButton = (Button) view.findViewById(R.id.redeem);
+        if (getSharedPreferences(Überschrift) < 0) {
+            RedeemButton.setEnabled(false);
+            updateButton();
+        }
         RedeemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,6 +122,8 @@ public class RaetselFragment extends Fragment {
         TextMain.setText(Maintext);
         frameLayout.setBackgroundColor(backgroundcolor);
         image_view.setImageResource(image);
+
+
         return view;
     }
 
@@ -123,20 +134,21 @@ public class RaetselFragment extends Fragment {
         }
     }
 
-    public void setOnListener(OnFragmentInteractionListener mListener){
+    public void setOnListener(OnFragmentInteractionListener mListener) {
         this.mListener = mListener;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-       if (context instanceof OnFragmentInteractionListener) {
+        if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
     }
+
 
     @Override
     public void onDetach() {
@@ -159,6 +171,19 @@ public class RaetselFragment extends Fragment {
         void onFragmentInteraction(String title);
     }
 
+    public int getSharedPreferences(String title) {
+
+        SharedPreferences sharedPreferences = getContext().getSharedPreferences(VERSUCHEKEY, Context.MODE_PRIVATE);
+        return sharedPreferences.getInt(title, 0);
+
+    }
+
+    public void updateButton() {
+
+        RedeemButton.setText("Erledigt!");
+
+
+    }
 
 
 }

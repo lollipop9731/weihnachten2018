@@ -4,12 +4,22 @@ public class Rätsel {
     String correct;
     String[] possibilites;
     String title;
+    boolean solved;
+
+    public boolean isSolved() {
+        return solved;
+    }
+
+    public void setSolved(boolean solved) {
+        this.solved = solved;
+    }
 
     public Rätsel(String correct, String[] possibilites, String title) {
 
         this.correct = correct;
         this.possibilites = possibilites;
         this.title = title;
+        this.solved = false;
     }
 
     public Rätsel() {
