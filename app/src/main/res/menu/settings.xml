@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/reset"
+        android:title="Rätsel beim Start zeigen"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        app:actionViewClass="android.widget.CheckBox"
+        android:checkable="true"
+
+        />
+
+
+</menu>

@@ -83,6 +83,8 @@ public class RaetselActivity extends AppIntro implements RaetselFragment.OnFragm
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
         alleRätselFragments = new ArrayList<>();
         alleRätsel = new ArrayList<>();
 
@@ -91,7 +93,7 @@ public class RaetselActivity extends AppIntro implements RaetselFragment.OnFragm
         ArrayList<String> titel = new ArrayList<>();
         titel.add("Einstein Rätsel");
         titel.add("Kryptischer Geldwunsch");
-
+        titel.add("Die findigen Gangster");
         titel.add("Das Ziegenproblem");
         titel.add("Das Golderbe");
         //todo unccomment
@@ -150,7 +152,6 @@ public class RaetselActivity extends AppIntro implements RaetselFragment.OnFragm
 
         if (allsolved) {
             //ALle erledigt
-            Toast.makeText(getApplicationContext(), "Geht los", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(RaetselActivity.this,MainActivity.class);
             startActivity(intent);
         }else{

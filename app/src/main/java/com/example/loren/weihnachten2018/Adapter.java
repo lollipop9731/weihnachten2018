@@ -1,6 +1,8 @@
 package com.example.loren.weihnachten2018;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
+    private final Context context;
     ItemClickListener mitemClickListener;
 
     public interface ItemClickListener{
@@ -31,6 +34,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         public ImageView backgroundimage;
         public TextView title;
         public Button einlösen;
+        public CardView layout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -39,6 +43,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             anzahl = (TextView) itemView.findViewById(R.id.item_anzahl);
             backgroundimage = (ImageView) itemView.findViewById(R.id.background_image);
             einlösen = (Button)itemView.findViewById(R.id.item_einlösen);
+            layout = (CardView) itemView.findViewById(R.id.item_layout);
 
         }
 
@@ -52,10 +57,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         }
 
 
+
+
     }
 
-    public Adapter(ArrayList<Item> items) {
+    public Adapter(ArrayList<Item> items, Context context) {
         this.items = items;
+        this.context = context;
     }
 
     @NonNull
@@ -75,6 +83,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         item.beschreibung.setText(items.get(i).getBeschreibung());
         item.title.setText(items.get(i).getTitle());
         item.backgroundimage.setImageDrawable(items.get(i).getBackgroundimage());
+        if(items.get(i).getAnzahl()==0){
+
+            item.layout.setBackgroundColor(context.getResources().getColor(R.color.grey));
+            item.einlösen.setTextColor(context.getResources().getColor(R.color.greydunkler));
+            item.anzahl.setTextColor(context.getResources().getColor(R.color.greydunkler));
+            item.beschreibung.setTextColor(context.getResources().getColor(R.color.greydunkler));
+            item.title.setTextColor(context.getResources().getColor(R.color.greydunkler));
+        }
         item.onBind(items.get(i),mitemClickListener);
 
 

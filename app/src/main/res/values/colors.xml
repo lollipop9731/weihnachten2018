@@ -11,4 +11,6 @@
     <color name="Ziegenproblem">#bf360c</color>
     <color name="Goldraetsel">#42a5f5</color>
     <color name="separtpr">#00ffffff</color>
+    <color name="grey">#bdbdbd</color>
+    <color name="greydunkler">#757575</color>
 </resources>

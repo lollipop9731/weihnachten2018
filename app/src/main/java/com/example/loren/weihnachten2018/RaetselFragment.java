@@ -1,6 +1,8 @@
 package com.example.loren.weihnachten2018;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +13,9 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 import static com.example.loren.weihnachten2018.DialogFragment.VERSUCHEKEY;
 
@@ -105,14 +110,42 @@ public class RaetselFragment extends Fragment {
         image_view = (ImageView) view.findViewById(R.id.image_middle);
         RedeemButton = (Button) view.findViewById(R.id.redeem);
         if (getSharedPreferences(Überschrift) < 0) {
-            RedeemButton.setEnabled(false);
             updateButton();
         }
         RedeemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onButtonPressed(Überschrift);
+                if(getSharedPreferences(Überschrift) < 0){
+                    Toast.makeText(getContext(),"Bereits geschafft!",Toast.LENGTH_LONG).show();
+                }else{
 
+                    onButtonPressed(Überschrift);
+                }
+
+
+            }
+        });
+
+        RedeemButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Versuche zurücksetzen?")
+                        .setMessage(R.string.resettries)
+                        .setPositiveButton("Okay", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                ArrayList<String> titel = new ArrayList<>();
+                                titel.add("Einstein Rätsel");
+                                titel.add("Kryptischer Geldwunsch");
+                                titel.add("Die findigen Gangster");
+                                titel.add("Das Ziegenproblem");
+                                titel.add("Das Golderbe");
+                                DialogFragment.deleteVersuche(titel,getActivity());
+                            }
+                        });
+                builder.create().show();
+                return true;
             }
         });
 

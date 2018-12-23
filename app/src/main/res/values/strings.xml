@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Weihnachten2018</string>
+    <string name="app_name">Frohe Weihnachten!</string>
     <string name="welcome_text">Einen wunderschönen guten Abend Luisa! Und natürlich der gesamten restlichen Familie auch. Da ich dir eigentlich immer gerne was selbstgemachtes schenken will, aber mir nicht so richtig was eingefallen ist, gibts jetzt deine persönliche Weihnachtsapp! Aber erst müssen ein paar Rätsel gelöst werden, wäre ja sonst zu langweilig. Also viel Spaß und einen schönen Abend noch :)</string>
     <string name="einfuehrung_text">Frohe Weihnachten an alle Wurls! Ich dachte mir, selbstgemachte Geschenke sind doch immer was feines und eine App hast du bestimmt noch nie bekommen Luisa. Am Ende wartet noch eine Überraschung, aber die muss erarbeitet werden. 5 Rätsel müssen vorher noch gelöst werden. Damit das Gehirn auch an Heiligabend in Schwung bleibt. Müssen natürlich nicht alle heute gelöst werden.
-Natürlich sind die Rätsel nicht nur für Luisa, alle dürfen sehr gerne mithelfen.
+Selbstverständlich sind die Rätsel nicht nur für Luisa, alle dürfen sehr gerne mithelfen.
 
 Die Rätsel können in beliebiger Reihenfolge gelöst werden
 , für die Antworteingabe auf den Haken unten links drücken.
@@ -86,4 +86,7 @@ Hinweis: Eine Münze darf nicht geteilt werden</string>
     <string name="versuche">%1$d / 2</string>
     <string name="massage_beschreibung">Da du ja ein Riesenfan von Massagen bist und ich ja leider nicht so der Riesenfan von Massieren bin, hast du jetzt die Gelegenheit ohne Meckern von mir! Versprochen!</string>
     <string name="kino_message">Gutschein für einmal Sneak im Studio, da waren wir so lange nicht mehr :) Aber nur Ticket, wir wollen ja nicht übertreiben...</string>
+    <string name="essen_message">Nehmen wir uns auch öfter vor, als wir es denn wirklich machen, also such dir was leckeres aus! Gutscheine sind alle bis nächtes Jahr Weihnachten gültig.</string>
+    <string name="uebernachtung_message">Wenn wir abends mal wieder beide faul sind und jeder sagt, dass der andere herkommen soll. Herzlichen Glückwunsch hiermit hast du jetzt 2 mal das Vorrecht!</string>
+    <string name="resettries">Herzlichen Glückwunsch, Geheimfunktion entdeckt, falls ihr die Versuche aufgebraucht habt! Hiermit werden sie auf null zurückgesetzt.</string>
 </resources>

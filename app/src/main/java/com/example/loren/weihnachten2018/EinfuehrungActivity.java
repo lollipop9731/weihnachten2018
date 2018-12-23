@@ -12,6 +12,10 @@ public class EinfuehrungActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_einfuehrung);
 
+        if(MainActivity.getSHowRätselOnStart(getApplicationContext())!=MainActivity.Start.SHOWRÄTSEL){
+            Intent intent = new Intent(EinfuehrungActivity.this,MainActivity.class);
+            startActivity(intent);
+        }
 
     }
 
