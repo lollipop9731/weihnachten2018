@@ -1,24 +1,34 @@
 package com.example.loren.weihnachten2018;
 
+import android.graphics.drawable.Drawable;
+
 public class Item {
-    int backgroundimage;
+    Drawable backgroundimage;
     String beschreibung;
     int anzahl;
+    String title;
 
     public Item() {
     }
 
-    public Item(int backgroundimage, String beschreibung, int anzahl) {
+    public Item(Drawable backgroundimage, String beschreibung, int anzahl) {
         this.backgroundimage = backgroundimage;
         this.beschreibung = beschreibung;
         this.anzahl = anzahl;
     }
 
-    public int getBackgroundimage() {
+    public Item(Drawable backgroundimage, String beschreibung, int anzahl, String title) {
+        this.backgroundimage = backgroundimage;
+        this.beschreibung = beschreibung;
+        this.anzahl = anzahl;
+        this.title = title;
+    }
+
+    public Drawable getBackgroundimage() {
         return backgroundimage;
     }
 
-    public void setBackgroundimage(int backgroundimage) {
+    public void setBackgroundimage(Drawable backgroundimage) {
         this.backgroundimage = backgroundimage;
     }
 
@@ -36,5 +46,13 @@ public class Item {
 
     public void setAnzahl(int anzahl) {
         this.anzahl = anzahl;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

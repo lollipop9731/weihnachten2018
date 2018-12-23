@@ -1,6 +1,7 @@
 package com.example.loren.weihnachten2018;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -150,6 +151,8 @@ public class RaetselActivity extends AppIntro implements RaetselFragment.OnFragm
         if (allsolved) {
             //ALle erledigt
             Toast.makeText(getApplicationContext(), "Geht los", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(RaetselActivity.this,MainActivity.class);
+            startActivity(intent);
         }else{
             Toast.makeText(getApplicationContext(), "Noch nicht alle erledigt!", Toast.LENGTH_LONG).show();
         }

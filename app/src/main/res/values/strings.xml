@@ -84,4 +84,6 @@ Wie viele Söhne hatte der Mann? \n
 Hinweis: Eine Münze darf nicht geteilt werden</string>
 
     <string name="versuche">%1$d / 2</string>
+    <string name="massage_beschreibung">Da du ja ein Riesenfan von Massagen bist und ich ja leider nicht so der Riesenfan von Massieren bin, hast du jetzt die Gelegenheit ohne Meckern von mir! Versprochen!</string>
+    <string name="kino_message">Gutschein für einmal Sneak im Studio, da waren wir so lange nicht mehr :) Aber nur Ticket, wir wollen ja nicht übertreiben...</string>
 </resources>
